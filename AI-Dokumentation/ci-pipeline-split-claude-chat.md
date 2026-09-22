@@ -132,3 +132,32 @@ Please Document this chat in the Ai-Dokumentation Folder in a new file, all outp
 **Claude**
 
 Created this file: `AI-Dokumentation/ci-pipeline-split-claude-chat.md`.
+
+**Nils**:
+The Upload of the Artifacts failed, because it did not find any files in the path
+
+**Claude**
+
+That's a known gotcha with `actions/upload-artifact` v4: since v4.4.0 it **excludes hidden files by default**, and `.next` is a hidden directory (starts with a dot), so the glob `path: .next/` matches zero files. The build itself worked — the uploader just refused to pick the files up.
+
+The fix is one line in the upload step:
+
+```yaml
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: .next/
+          include-hidden-files: true
+```
+
+Applied to `.github/workflows/ci-3.yaml`. Background: GitHub added this default in v4.4.0 as a security measure, because hidden files (e.g. `.env`, `.git`) were being uploaded into artifacts unintentionally. For a build output folder like `.next` it's safe to enable, since it only contains generated build files.
+
+After pushing the change, the artifact upload should work — the deploy job's `ls -R .next` will then show the downloaded files.
+
+**Nils**:
+Document this chat again
+
+**Claude**
+
+Updated this file: the artifact-upload exchange had already been appended, and this request is now recorded as well. The documentation is up to date with the full chat.

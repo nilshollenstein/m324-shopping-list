@@ -31,3 +31,5 @@ Dieser Chat ist im File "AI-Dokumentation/ci-pipeline-split-claude-chat.md" doku
 Unsere Entscheidung war der dritte, da er für uns am saubersten ist. Er lässt Tests und Linting gleichzeitig laufen, buildet dann das Projekt und dann kommt das Deployment (simuliert).  
 
 Auf diese Art könnte man sauber an verschiedene Orte deployen, ohne mehrmals builden zu müssen
+
+Die AI wurde noch verwendet, um einen Fehler beim Artifact-Upload zu beheben, dieser lag daran, dass die Pipeline standartmässig Hidden Files (. vor dem Namen) nicht ausliest, das hat sie danach auch selbst nochmals im selben File dokumentiert 
