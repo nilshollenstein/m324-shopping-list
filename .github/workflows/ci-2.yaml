@@ -24,6 +24,9 @@ jobs:
 
           - name: Lint Project
             run: npm run lint
-          
+
+          - name: Jest Test
+            run: npm test
+
           - name: Build Project
             run: npm run build
