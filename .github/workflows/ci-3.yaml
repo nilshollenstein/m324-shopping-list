@@ -45,6 +45,7 @@ jobs:
         with:
           name: next-build
           path: .next/
+          include-hidden-files: true
 
   deploy:
     runs-on: ubuntu-latest
