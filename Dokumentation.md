@@ -12,3 +12,5 @@ Das Workflow file reagiert auf den push und buildet das Projekt auf den Main Bra
 ESLint muss nicht mehr installiert werden, es ist bereits vorhanden, die Konfiguration verwendet die Standart-Konfiguration für NextJS, es ist also schon korrekt konfiguriert für das Projekt
 In der Action muss dann noch der entsprechende Step hinzugefügt werden, indem der npm Befehl ausgeführt wird
 
+KI wurde für die Verifizierung der Konfiguration verwendet, da die installierte Version von ES-Lint älter ist und deshalb mit der Doku nicht ganz übereinstimmt.
+Der Chat ist im file AI-Dokumentation/eslint-claude-chat.md dokumentiert
