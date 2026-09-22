@@ -22,6 +22,7 @@ Die Tests wurden dann von AI gepromptet und alle depedencies wied die jest.confi
 Dann wurde von mir die Pipeline geänderted um die Tests durchzuführen
 
 Die KI hatte sich entschieden das package-lock.json zu löschen, und dann hat es vergessen alle dependencies zu wiederherstellen und das folgten Dependenncy errors.
+Der Chat ist im file AI-Dokumentation/eslint-claude-chat.md dokumentiert
 
 ## Pipeline-Optimierung
 Bei der Pipeline-Optimierung wurde zuerst eine AI hinzugezogen, um Ideen zu erhalten, wie die Pipeline am besten strukturiert werden könnte. 
