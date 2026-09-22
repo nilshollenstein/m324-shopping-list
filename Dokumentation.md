@@ -22,3 +22,11 @@ Die Tests wurden dann von AI gepromptet und alle depedencies wied die jest.confi
 Dann wurde von mir die Pipeline geänderted um die Tests durchzuführen
 
 Die KI hatte sich entschieden das package-lock.json zu löschen, und dann hat es vergessen alle dependencies zu wiederherstellen und das folgten Dependenncy errors.
+
+## Pipeline-Optimierung
+Bei der Pipeline-Optimierung wurde zuerst eine AI hinzugezogen, um Ideen zu erhalten, wie die Pipeline am besten strukturiert werden könnte. 
+
+Dieser Chat ist im File "AI-Dokumentation/ci-pipeline-split-claude-chat.md" dokumentiert. Danach haben wir besprochen, was der beste Vorschlag ist.
+Unsere Entscheidung war der dritte, da er für uns am saubersten ist. Er lässt Tests und Linting gleichzeitig laufen, buildet dann das Projekt und dann kommt das Deployment (simuliert).  
+
+Auf diese Art könnte man sauber an verschiedene Orte deployen, ohne mehrmals builden zu müssen
